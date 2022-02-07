@@ -1,0 +1,251 @@
+Git:
+-There is a concept of source code management(SOM). Git work pn this concept. Git is a distributed version control system. It keep all versions.
+
+-md means markdown documentation. It is a lightweight markup language that can be easily converted to text.
+
+-Creating a branch, and merge it with main branch.
+
+-Fork in Github:
+Fork means replica or mirror. Forks let you make changes to a project without affecting the original repository.
+
+-How to check git is installed or not:
+Open cmd and type command git --version
+
+Git bash:
+-Git bash works on linux command.
+
+How to read commits(changes) in Github:
+- If the text is blue thats mean unchange.
+- If the text is green thats mean you add a text.
+- If the text is red thats mean you delete a text.
+- Git save every commit with a unique number.
+
+-Commands:
+*** To set username
+- git config --global user.name HJ90139
+
+*** To set user email
+- git config --global user.email HJ90139@gmail.com
+
+*** To check username and user email after setting
+- git config --global user.name
+- git config --global user.email
+
+*** To open default ide in that folder
+-code .
+
+*** Command to initialize a Git repository
+- git init
+(It will make hidden folder of git)
+
+*** To see hidden files in present folder
+- ls -lart
+
+*** To make a file in a folder
+touch filename.extension
+- touch about.html
+- touch contact.html
+
+*** To check the status of tracked and untracked files. -- Red(untracked)  --Green(tracked/staged)
+- git status
+
+*** To check the status of tracked and untracked files. -- Red(untracked)  --Green(tracked/staged)
+     It will show the status if there is any change, otherwise it will not give you any output.
+- git status -s
+
+*** To add the single untracked file to staging area(tracked files)
+git add filename.extension
+- git add about.html
+Whenever you modify anything in the file you to add it again 
+
+*** To add the all untracked files to staging area(tracked files)
+- git add .
+
+*** To unstaged the stage file to untracked: (App ne git add kr liya tha is file ko r wo 
+    staging area ya green color mein agaye thi, ab app ko us ko hatana hai )
+git rm --cached filename.extension
+- git rm --cached delete.html
+
+*** To delete the commited file from staged: (App ne git add kr liya tha r commit bhiis file ko 
+    ab app ko us ko delete krna hai )
+git rm --cached filename.extension
+- git rm --cached delete.html
+
+*** To delete from your harddisk
+- git rm delete.html
+
+*** To commit the staging area file
+- git commit -m "The first commit"
+
+*** if you have added and commited all files from the folder than the result of git status command
+    will be "nothing to commit, working tree clean"
+
+*** As git is version control system , if we delete a file or content of file, we can restore the 
+    previous version via below command. Git matched these files from previous commits.
+git checkout filename.extension
+- git checkout about.html
+
+*** As git is version control system , if we delete all files or contents of files, we can    
+    restore the previous version via below command. Git matched these files from previous commits.
+- git checkout -f
+
+*** To see the history of commit with timestamp
+- git log
+
+*** To see the history of number of last commit in detail
+- git log -p -1  ---It will show the one last commit
+- git log -p -2  ---It will show the two last commit
+- git log -p -3  ---It will show the three last commit
+To exit, you need to press q.
+
+*** When you make a new file , on vscode it will show you its a untracked file by showing small 
+    U beside the name of the file.
+
+*** For staging and commit in one command
+git commit -a -m "Your msg"
+- git commit -a -m "Skipping the stage area"
+
+*** It will show the list of files in the current folder
+- ls
+
+*** It will show the present work directory, where you open the git
+- pwd 
+
+*** What is .gitignore file:
+This is a file or folder which we want to ignore by git. We simple add the name of file or /folder
+in .gitignore file.
+- touch .gitignore
+- touch mylogs.log
+- code .
+write anything on this mylogs.log file
+-Open .gitignore file and write the name of mylogs.log file
+-Let suppose you have folder games, and you want to ignore, simple open the .gitignore file and 
+write the name of games by typing /games in .gitignore file.
+-If you want to ignore the file which has .ccp extension then simple open the .gitignore file and 
+write .ccp
+-If you want to ignore the all log files,   then simple open the .gitignore file and 
+write *.log
+
+*** To view the branch you are working
+- git branch
+
+*** To make a new branch
+- git branch confuse
+
+*** To switch the branch
+git checkout branchname
+- git checkout confuse
+Note: After switching branch , if you change anything it will do on the branch you are at, it will not show the changes or newly created file of one branch to another
+
+*** To merge the branches
+First go to the branch where you need to merge
+- git checkout master
+- git merge confuse
+
+*** How to upload your work in git account.
+First do all the add and commit you want, then open your git hub and make a new repo.
+- git remote add origin https://github.com/HJ90139/Git-in-one-video.git
+- git push origin master
+
+*** Git clone/copy
+Open the folder in the system you want to clone and the command is:
+git clone HTTP Link
+
+*** Fetch and push
+- git remote -v
+
+
+GIT commands that are important to learn to use command line 
+    1. git config –global user.name Anurag – For configuring the name 
+    2. git config –global user.email beaprogrammer24@gmail.com – to set the email 
+    3. git config –global user.name – For checking the changes have been affected
+    4. git config –global user.email - For checking the changes have been affected
+    5. code . – to open the VS Code
+    6. git init – initialize the git repository 
+    7. ls -lart – To see the Hidden files
+    8. git status – To check the status of the files 
+    9. git add index.html – To add to the staging area
+    10. git commit – to send the staged files to commit
+    11. press Insert then :wq then write the name of the initial commit (Wim editor)
+    12. touch about.html – to create a empty file named with about.html
+    13. git add -A – To add all the untracked files to staging area
+    14.  git commit -m “Any Commit message” – to add the commit and message shortcut
+    15. clear – to clear the previous files
+    16. git checkout contact.html – To match the file with last commit 
+    17. git checkout -f – All files get matched to the previous files
+    18. git log – to check the activity of the files, all the commits are shown and config files
+    19. git log -p -1– to see he last 1 commits on the machine and shows the changes we made
+    20. press q to quit
+    21. git diff – it compares the working tree with staging area(if both are same then no output)
+    22. git diff –stagged -compare the last commit with staging area
+    23. git checkout -f – matches the file with last commit 
+    24. git commit -a -m “skipped staging area and fixed” -If you wat to directly commit the file without making it to the staging area( for beginners only)
+    25. ls -we can see all the files as it is feature of UNIX.
+    26. touch delete.html -to create a empty file
+    27. git add -A 
+    28. git commit -a -m “Add waste file”
+    29. git rm –cached – it will remove from staging area only not from hard disk 
+    30. git rm waste.html -If you want to delete a file 
+    31. git commit -a -m “removing waste”
+    32. git log -p -2 – If you want to see 2 commits
+    33. git status -s – shows the summarized status(modify the file then use this command )
+    34. git add file.html 
+    35. git status -s  shows the m in green
+    36. touch  .gitignore -Files that you don’t want tag 
+    37. touch mylog.log -Example of log file write anything
+    38. in gitignore write mylogs.log to ignoire all the file with this name
+    39. run git status -it will not show that file added in the gitignore
+    40. add this in gitignore  /mylogs.log  -if you want to add the same file in same folder
+    41. git rm –cached logs/mylogs.log -to remove from the stages area 
+    42. *.log in gitignore – To add file with .log 
+    43.   ignore a folder foldername/
+    44. Git commit -a -m “Ignoring the files in the ignore files”
+Creating a Branch by command line
+    1. git status -Explain about the on branch master 
+    2. git branch -it shows all the branch in the git 
+    3. git branch update1 -New branch with name update1 is created 
+    4. git branch – now two branches will be shown
+    5. git checkout update1 -Switch to the branch update1 
+Using the merge feature in the git command line 
+Make some changes in the code you have written in any of the file then use next command 
+    1. git add -A 
+    2. git commit -m “Fixed the programs and added more features”
+    3. git status 
+    4. git checkout master – To move to the master Branch 
+    5. git checkout update1
+    6. add the comment in the file any comment 
+    7. git commit -a -m “added some comments”
+    8. git status
+    9. git checkout master -for merging the branch to master then we will switch to master
+    10. git log 
+    11. git merge update1 -this merge the update code to master
+    12. git log -p -2 -We can see the logs of the same commit in update to the master now.
+    13. git checkout -b nodeintegration -It will switch and make the branch in this command 
+Create a js file and add some printing code in it then commit 
+    1. git commit -a -m “Added the node file in the code”
+    2. git status 
+    3. when we switch to master the file of node will be lost now 
+    4. git checkout master
+    5. in about.html write anything 
+    6. git commit -a -m “modified the about page”
+    7. git status 
+    8. git checkout nodeintegration
+    9. files again comes
+Now talk about GitHub service (Microsoft service)
+
+On command line 
+    1- git checkout master 
+    2- remote repository 
+    3- paste the repository origin URL in the GitHub 
+    4- git remote 
+    5- git remote -v (push and fetch urls)
+    6- git push origin master ( as the private repo then it will show there is no repo)
+    7- create new folder on desktop on clone
+    8- copy the clone url
+    9- git clone url foldernanme  (clone to the folder name )
+
+
+
+
+
+
